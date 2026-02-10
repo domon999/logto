@@ -1,46 +1,39 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-node_modules
+# Dependencies
+/node_modules
 /.pnp
 .pnp.js
-.pnpm-store
 
-# testing
-/packages/**/coverage
+# Testing
+/coverage
 
-# report
-/report.json
-/packages/**/report.json
+# Next.js
+/.next/
+/out/
 
-# production
-/packages/**/build
-/packages/**/lib
-/packages/**/dist
+# Production
+/build
 
-# logs
-logs
-*.log*
-
-# misc
-cache
-.*cache
+# Misc
 .DS_Store
-*.env
-.idea/
 *.pem
-.history
-fly.toml
-dump.rdb
 
-# Claude local files
-.claude/
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# connectors
-/packages/core/connectors
+# Local env files
+.env*.local
+.env
 
-# console auto generated files
-/packages/console/src/consts/jwt-customizer-type-definition.ts
+# Vercel
+.vercel
 
-# Temporarily ignore SAML OpenAPI spec file (will be needed later)
-packages/core/src/saml-applications/routes/index.openapi.json
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Old Logto monorepo files (ignored)
+/packages
+/pnpm-lock.yaml
+/pnpm-workspace.yaml
